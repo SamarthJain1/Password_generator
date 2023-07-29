@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #320c4d, #f0706a, #8315bc, #4e0d70);
+    background-size: 800% 800%;
+    animation: gradient 45s ease infinite;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.special_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special_flex {
+    font-size: 22px;
+}
+
+.pass_copy {
+    background-color: black;
+    padding: 10px 40px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 0 2px #24c0a1, 8px 8px 0 0 #24c0a1;
+
+}
+
+.pass_copy input {
+    width: 330px;
+    font-size: 30px;
+    padding: 3px;
+    color: yellow;
+    background-color: black;
+    border-radius: 20px;
+    border: none;
+}
+
+.pass_copy ion-icon {
+    color: aqua;
+    font-size: 25px;
+    padding: 18px;
+}
+
+.box {
+    background-color: black;
+    padding: 20px 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #4e0d70;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 0 0 2px rgba(218, 102, 123, 1), 8px 8px 0 0 rgba(218, 102, 123, 1);
+}
+
+.box .len {
+    font-size: 25px;
+    padding: 3px;
+    color: yellow;
+}
+
+.box h3 {
+    padding: 10px;
+}
+
+#slider {
+    width: 100%;
+    appearance: none;
+    width: 100%;
+    height: 17px;
+    background: #24c0a1;
+    outline: none;
+    border-radius: 50px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    background: #da667b;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#slider::-webkit-slider-thumb:hover {
+    background-color: black;
+    border: 1px solid yellow;
+    box-shadow: 0px 0px 15px yellow;
+}
+
+.box label {
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+
+.box input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.generate {
+    padding: 10px 30px;
+    width: 80%;
+    font-size: 22px;
+    background-color: #f0706a;
+    margin: auto;
+    border-radius: 30px;
+}
+
+
+.generate:hover {
+    animation: bgcol 1s ease-in-out forwards;
+}
+
+@keyframes bgcol {
+    0% {
+        background-color: #f0706a;
+        color: black;
+    }
+
+    25% {
+        background-color: #bc5068;
+    }
+
+    50% {
+        background-color: #8c3367;
+    }
+
+    75% {
+        background-color: #cc5f16;
+    }
+
+    100% {
+        background-color: #cc7616;
+        color: white;
+    }
+}
+
+ion-icon {
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+ion-icon:hover {
+    transform: scale(1.3);
+}
+
+.copied {
+    position: absolute;
+    right: 4%;
+    top: -25%;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 30px;
+    color: green;
+    font-weight: 900;
+    padding: 2px 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.copied.show {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+    .pass_copy {
+        padding: 8px 20px;
+    }
+
+    .pass_copy input {
+        width: 280px;
+    }
+
+    .box {
+        padding: 10px 30px;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .head {
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .pass_copy input {
+        width: 240px;
+        font-size: 18px;
+    }
+
+    .pass_copy ion-icon {
+        color: aqua;
+        font-size: 20px;
+        padding: 18px;
+    }
+
+    .box {
+        padding: 5px 15px;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 310px;
+        gap: 5px;
+    }
+
+    .box label {
+        font-size: 16px;
+    }
+
+    .generate {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .copied {
+        right: 0;
+        top: -25%;
+        font-weight: 700;
+        padding: 2px 6 px;
+    }
+
+    #slider {
+        height: 12px;
+    }
+}

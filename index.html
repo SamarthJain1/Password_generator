@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password_Generator</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="https://img.icons8.com/officel/80/sound-recording-copyright.png" type="image/png"
+        sizes="80x80">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="head">
+            <h1>Password generator</h1>
+        </div>
+        <div class="special_flex pass_copy">
+            <input class="pass" type="text" placeholder="PASSWORD" readonly>
+            <ion-icon name="copy-outline"></ion-icon>
+            <div class="copied">Copied</div>
+        </div>
+        <div class="box">
+            <div class="special_flex">
+                <h3>Password Length</h3>
+                <p class="len">1</p>
+            </div>
+            <div>
+                <input type="range" min="1" max="20" value="1" id="slider">
+            </div>
+            <div>
+                <input class="check" type="checkbox" name="c1">
+                <label for="c1">Include Uppercase Letter</label>
+            </div>
+            <div>
+                <input class="check" type="checkbox" name="c2">
+                <label for="c2">Include Lowercase Letter</label>
+            </div>
+            <div>
+                <input class="check" type="checkbox" name="c3">
+                <label for="c3">Include Numbers</label>
+            </div>
+            <div>
+                <input class="check" type="checkbox" name="c4">
+                <label for="c4">Include Symbols</label>
+            </div>
+            <div class="special_flex">
+                <p>Strength</p>
+                <div class="strength" style="color: red;">Weak</div>
+            </div>
+            <button class="generate">generate password</button>
+        </div>
+    </div>
+    <script src="JS/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
